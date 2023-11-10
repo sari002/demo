@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Secure Text Editor</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Secure Text Editor</h1>
+        </header>
+        <nav>
+            <!--
+            <a>Import Document</a> 
+            <a>Export Document</a> 
+            <a>Details zur Episode</a> 
+            <a>Neuen Podcast anlegen</a>
+            <a>Index2</a>
+            -->
+        </nav>
+        <section>
+            <form method="post" action="/processForm">
+                <input list="methods" class="datalists" id="inputMethod" name="inputMethod" required placeholder="Select method">
+                <datalist id="methods">
+                    <option value="AES">
+                    <option value="DES">
+                </datalist>
+                <input list="modes" class="datalists" id="inputMode" name="inputMode" required placeholder="Select mode">
+                <datalist id="modes">
+                    <option value="ECB">
+                    <option value="CBC">
+                    <option value="CTS">
+                </datalist>
+                <input list="paddings" class="datalists" id="inputPadding" name="inputPadding" required placeholder="Select padding">
+                <datalist id="paddings">
+                    <option value="ISO7816-4">
+                    <option value="ISO101026-2">
+                    <option value="PKCS5">
+                    <option value="PKCS7">
+                    <option value="TBC">
+                    <option value="X9.23">
+                    <option value="ZeroByte">
+                </datalist>
+                <textarea id="input" name="input" placeholder="Write here..." required></textarea>
+                <p>
+                    <span class="bt"><input type="submit" value="Encrypt"></span>
+                </p>
+            </form>
+        </section>
+        <aside>
+            <p>Output: </p>
+            <p th:text="${output}" id="outputField"></p>
+        </aside>  
+    </body>
+</html>

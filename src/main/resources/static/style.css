@@ -1,0 +1,33 @@
+* {
+    background-color: #212738;
+    color: #EDF2EF;
+    font-family: monospace;
+}
+
+h1 {
+    color: #F0B6D6;
+}
+
+textarea{
+    background-color: #424159; 
+    color: #EDF2EF;
+    width:60em;
+    height: 30em;
+    margin: 10px;
+    border: solid white 3px;
+    outline-width: 0;
+    padding: 10px;
+}
+
+.datalists {
+    background-color: transparent;
+    border: white solid;
+    outline-width: 0;
+    color: white;
+    padding: 5px;
+}
+
+#outputField {
+    border: white solid;
+    padding: 10px;
+}
